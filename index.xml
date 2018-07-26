@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jacob Beckerman on Jacob Beckerman</title>
+    <link>https://jbecke.github.io/</link>
+    <description>Recent content in Jacob Beckerman on Jacob Beckerman</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy Jacob  Beckerman; 2018</copyright>
+    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 -0400</lastBuildDate>
+    <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Vr Vendor</title>
+      <link>https://jbecke.github.io/project/vr-vendor/</link>
+      <pubDate>Tue, 24 Jul 2018 16:21:18 -0400</pubDate>
+      
+      <guid>https://jbecke.github.io/project/vr-vendor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Open IE Research</title>
+      <link>https://jbecke.github.io/project/squadie/</link>
+      <pubDate>Tue, 24 Jul 2018 14:27:01 -0400</pubDate>
+      
+      <guid>https://jbecke.github.io/project/squadie/</guid>
+      <description>
+
+&lt;h2 id=&#34;what-is-open-information-extraction-openie&#34;&gt;What is Open Information Extraction (OpenIE)?&lt;/h2&gt;
+
+&lt;p&gt;OpenIE is the &lt;a href=&#34;https://github.com/sebastianruder/NLP-progress&#34; target=&#34;_blank&#34;&gt;Natural Language Processing task&lt;/a&gt; of extracting machine-readable information from free text (e.g. books, news, etc). Concretely, most OpenIE systems generate &amp;lt;subject, relation, object&amp;gt; tuples, e.g. &amp;ldquo;Barack Obama was President of the United States.&amp;rdquo; becomes &amp;lt;Barack Obama, was President of, the United States&amp;gt; or &amp;lt;Barack Obama, was, President of the United States&amp;gt;. OpenIE is useful for knowledge-base construction, fact-checking,&lt;/p&gt;
+
+&lt;h2 id=&#34;what-are-the-issues-with-existing-systems&#34;&gt;What are the issues with existing systems?&lt;/h2&gt;
+
+&lt;p&gt;Current systems fail to extract tuples for &lt;em&gt;implicit&lt;/em&gt; relations, e.g. &amp;ldquo;U.S. President Barack Obama said yesterday&amp;hellip;&amp;rdquo; should imply &amp;lt;Barack Obama, is , U.S President&amp;gt;. While some parse-based methods can handle simple implicit relations like this, the problem is quickly exasterbated.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The Tragedy of the Partially Observable Connectionist</title>
+      <link>https://jbecke.github.io/post/connectionist/</link>
+      <pubDate>Sun, 08 Jul 2018 22:39:23 -0400</pubDate>
+      
+      <guid>https://jbecke.github.io/post/connectionist/</guid>
+      <description>
+
+&lt;blockquote&gt;
+&lt;p&gt;Or equivalently, Folk Theories of Epiphenomena in Artificial Intelligence. In this post, I postulate that humans brains are “partially observable connectionists”: neural nets unable observe their full internal state. I wonder with what efficacy (over random search) these agents can reproduce their architectures, given their limited introspection abilities.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;A foreword on the word &amp;ldquo;conscious&amp;rdquo;: I use this word only in the context of &amp;ldquo;the conscious brain&amp;rdquo; which I use interchangeably with &amp;ldquo;the accessible brain&amp;rdquo;. By this I mean the part I have access to. For example, I have access to my internal voice, to feeling in my toes, to random fleeting memories, to music stuck in my head. I don&amp;rsquo;t have access to the &amp;ldquo;unconscious&amp;rdquo; or &amp;ldquo;inaccessible&amp;rdquo; brain, i.e. the transmission of signals along my spinal cord, the firing of my neurons, and much more.&lt;/p&gt;
+
+&lt;h2 id=&#34;a-model-of-the-brain&#34;&gt;A model of the brain&lt;/h2&gt;
+
+&lt;p&gt;One can think of the brain as a large collection the inaccessible machinery combined with a small window of accessible area. I imagine the mind like the Chinese Room, except instead of a dictionary, the man has a huge collection of bits and tools. Schmidhuber might say that there&amp;rsquo;s an unconcious adaptive compreessor that provides most of our motivations. Even if not, I&amp;rsquo;m more certain that the retreival process is mostly unconcious
+article on The Connectionist Database&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The Elusiveness of a Schema for Common Sense</title>
+      <link>https://jbecke.github.io/post/common-sense-schema/</link>
+      <pubDate>Sat, 07 Jul 2018 19:24:31 -0400</pubDate>
+      
+      <guid>https://jbecke.github.io/post/common-sense-schema/</guid>
+      <description>
+
+&lt;p&gt;My interest in AI research comes from a particular frustration. Click here to skip my story.&lt;/p&gt;
+
+&lt;p&gt;In 2011, I had just built a gaming PC when The Elder Scrolls V: Skyrim came out. It was a fantastic, immersive experience except for one sore point: the non-player characters (NPCs). The designers created a graphically beautiful and lore-rich world, inhabited by finite state machines.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;h2 id=&#34;the-designers-created-a-graphically-beautiful-and-lore-rich-world-inhabited-by-finite-state-machines&#34;&gt;The designers created a graphically beautiful and lore-rich world, inhabited by finite state machines.&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;If you&amp;rsquo;re role playing as a manic Nord who kills every villager in sight, the state machine design is fine. But as soon as you try to talk to an NPC the immersion falls apart (you select dialog lines from a pre-defined list at each turn).&lt;/p&gt;
+
+&lt;p&gt;I developed an idea that sits in my journal under &amp;ldquo;NPC manifesto&amp;rdquo; from 2014. The first part is using speech recognition and text-to-speech instead of multiple choice. But that creates a problem: how do NPCs respond to arbitrary text? This is the meat of the idea.&lt;/p&gt;
+
+&lt;p&gt;I wanted to represent each NPC as a set of several things: (1) a personality vector (think word2vec), (2) a vernacular embedding, and (3) a subscription to various databases. The databases would chiefly be semantic nets (e.g. 3-tuples of entity-relation-entity), with some things stored in a relational database (e.g. date of birth). Neo4j, OrientDB, or other graph databases that allow you to mix properties and relations would be a good fit for this. The game would have several KBs. There&amp;rsquo;d be a interpersonal relation KB, a temporally-coded KB of events (e.g. a lore), and specialty knowledge (e.g. crafting materials). As an aside: perhaps a temporal graph database could simplify this structure. I thought I&amp;rsquo;d cracked NPCs - or at least had the right design such that a team of writers, engineers, and artists could make believable characters under the framework. I considered building it as a middleware and marketing it as a &amp;ldquo;personality engine&amp;rdquo; for games (&lt;a href=&#34;https://www.researchgate.net/publication/262150526_GAMYGDALA_An_emotion_engine_for_games&#34; target=&#34;_blank&#34;&gt;related paper&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;What if the player asks an NPC, &amp;ldquo;Why can Dragons fly&amp;rdquo;? The system queries the knowledge graph and retrieves the tuple &lt;dragons, can fly because they have, wings&gt;. Then the NLG systems realizes this into a coherent sentence and delivers it to the player.&lt;/p&gt;
+
+&lt;p&gt;Now the player asks, &amp;ldquo;But what is it about wings that allow an entity to fly&amp;rdquo;. Maybe, as virtual assistants do, the system grabs a span from Wikipedia on how wings work. It then uses the vernacular vector to &amp;ldquo;translate&amp;rdquo; the span and have the NPC speak it.&lt;/p&gt;
+
+&lt;p&gt;But what if the player asks, &amp;ldquo;Shall I attempt to slay the dragon with my dagger&amp;rdquo;? This requires an understanding, among many other things, that (1) a dagger is a melee weapon, (2) the dragon can fly, which entails (3) a melee weapon is not an appropriate choice because the dragon can just fly away. In other words, this requires an understanding of intuitive physics.&lt;/p&gt;
+
+&lt;p&gt;How do we represent intuitive physics?&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

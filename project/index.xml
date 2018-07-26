@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Jacob Beckerman</title>
+    <link>https://jbecke.github.io/project/</link>
+    <description>Recent content in Projects on Jacob Beckerman</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy Jacob  Beckerman; 2018</copyright>
+    <lastBuildDate>Tue, 24 Jul 2018 16:21:18 -0400</lastBuildDate>
+    
+	<atom:link href="https://jbecke.github.io/project/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Vr Vendor</title>
+      <link>https://jbecke.github.io/project/vr-vendor/</link>
+      <pubDate>Tue, 24 Jul 2018 16:21:18 -0400</pubDate>
+      
+      <guid>https://jbecke.github.io/project/vr-vendor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Open IE Research</title>
+      <link>https://jbecke.github.io/project/squadie/</link>
+      <pubDate>Tue, 24 Jul 2018 14:27:01 -0400</pubDate>
+      
+      <guid>https://jbecke.github.io/project/squadie/</guid>
+      <description>What is Open Information Extraction (OpenIE)? OpenIE is the Natural Language Processing task of extracting machine-readable information from free text (e.g. books, news, etc). Concretely, most OpenIE systems generate &amp;lt;subject, relation, object&amp;gt; tuples, e.g. &amp;ldquo;Barack Obama was President of the United States.&amp;rdquo; becomes &amp;lt;Barack Obama, was President of, the United States&amp;gt; or &amp;lt;Barack Obama, was, President of the United States&amp;gt;. OpenIE is useful for knowledge-base construction, fact-checking,
+What are the issues with existing systems?</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Jacob Beckerman</title>
+    <link>https://jbecke.github.io/post/</link>
+    <description>Recent content in Posts on Jacob Beckerman</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy Jacob  Beckerman; 2018</copyright>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://jbecke.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The Tragedy of the Partially Observable Connectionist</title>
+      <link>https://jbecke.github.io/post/connectionist/</link>
+      <pubDate>Sun, 08 Jul 2018 22:39:23 -0400</pubDate>
+      
+      <guid>https://jbecke.github.io/post/connectionist/</guid>
+      <description>Or equivalently, Folk Theories of Epiphenomena in Artificial Intelligence. In this post, I postulate that humans brains are “partially observable connectionists”: neural nets unable observe their full internal state. I wonder with what efficacy (over random search) these agents can reproduce their architectures, given their limited introspection abilities.
+ A foreword on the word &amp;ldquo;conscious&amp;rdquo;: I use this word only in the context of &amp;ldquo;the conscious brain&amp;rdquo; which I use interchangeably with &amp;ldquo;the accessible brain&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>The Elusiveness of a Schema for Common Sense</title>
+      <link>https://jbecke.github.io/post/common-sense-schema/</link>
+      <pubDate>Sat, 07 Jul 2018 19:24:31 -0400</pubDate>
+      
+      <guid>https://jbecke.github.io/post/common-sense-schema/</guid>
+      <description>My interest in AI research comes from a particular frustration. Click here to skip my story.
+In 2011, I had just built a gaming PC when The Elder Scrolls V: Skyrim came out. It was a fantastic, immersive experience except for one sore point: the non-player characters (NPCs). The designers created a graphically beautiful and lore-rich world, inhabited by finite state machines.
+ The designers created a graphically beautiful and lore-rich world, inhabited by finite state machines.</description>
+    </item>
+    
+  </channel>
+</rss>
