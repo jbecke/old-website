@@ -27,8 +27,7 @@
       <pubDate>Tue, 24 Jul 2018 14:27:01 -0400</pubDate>
       
       <guid>https://jbecke.github.io/project/squadie/</guid>
-      <description>What is Open Information Extraction (OpenIE)? OpenIE is the Natural Language Processing task of extracting machine-readable information from free text (e.g. books, news, etc). Concretely, most OpenIE systems generate &amp;lt;subject, relation, object&amp;gt; tuples, e.g. &amp;ldquo;Barack Obama was President of the United States.&amp;rdquo; becomes &amp;lt;Barack Obama, was President of, the United States&amp;gt; or &amp;lt;Barack Obama, was, President of the United States&amp;gt;. OpenIE is useful for knowledge-base construction, fact-checking,
-What are the issues with existing systems?</description>
+      <description>What is Open Information Extraction (OpenIE)? OpenIE is the Natural Language Processing task of extracting machine-readable information from free text (e.g. books, news, etc). Concretely, most OpenIE systems generate &amp;lt;subject, relation, object&amp;gt; tuples, e.g. &amp;ldquo;Barack Obama was President of the United States.&amp;rdquo; becomes &amp;lt;Barack Obama, was President of, the United States&amp;gt; or &amp;lt;Barack Obama, was, President of the United States&amp;gt;. OpenIE is useful for knowledge-base construction, fact-checking, and other downstream NLP applications (Stanovsky et al.</description>
     </item>
     
   </channel>

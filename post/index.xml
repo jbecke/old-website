@@ -12,5 +12,14 @@
 	<atom:link href="https://jbecke.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Top Down or Bottom Up: Two Paradigms for Artificial General Intelligence</title>
+      <link>https://jbecke.github.io/post/top-down-bottom-up/</link>
+      <pubDate>Thu, 26 Jul 2018 21:07:34 -0400</pubDate>
+      
+      <guid>https://jbecke.github.io/post/top-down-bottom-up/</guid>
+      <description>Artificial General Intelligence (AGI, AKA strong AI, human-level AI) refers an AI that can solve any task a human can. I&amp;rsquo;m most interested in a conversational AI that is indistinguishable from a human (Turing, 1950). Whatever you call it, there is a dichotomy in building AGI: use one giant neural network, or use more than one. It sounds like an implementation-specific decision, but your opinion will inform your research discipline of choice (assuming you want to build AGI).</description>
+    </item>
+    
   </channel>
 </rss>

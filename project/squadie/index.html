@@ -17,8 +17,7 @@
       
     
   
-  <meta name="description" content="What is Open Information Extraction (OpenIE)? OpenIE is the Natural Language Processing task of extracting machine-readable information from free text (e.g. books, news, etc). Concretely, most OpenIE systems generate &lt;subject, relation, object&gt; tuples, e.g. &ldquo;Barack Obama was President of the United States.&rdquo; becomes &lt;Barack Obama, was President of, the United States&gt; or &lt;Barack Obama, was, President of the United States&gt;. OpenIE is useful for knowledge-base construction, fact-checking,
-What are the issues with existing systems?">
+  <meta name="description" content="What is Open Information Extraction (OpenIE)? OpenIE is the Natural Language Processing task of extracting machine-readable information from free text (e.g. books, news, etc). Concretely, most OpenIE systems generate &lt;subject, relation, object&gt; tuples, e.g. &ldquo;Barack Obama was President of the United States.&rdquo; becomes &lt;Barack Obama, was President of, the United States&gt; or &lt;Barack Obama, was, President of the United States&gt;. OpenIE is useful for knowledge-base construction, fact-checking, and other downstream NLP applications (Stanovsky et al.">
 
   
   <link rel="alternate" hreflang="en-us" href="https://jbecke.github.io/project/squadie/">
@@ -80,8 +79,7 @@ What are the issues with existing systems?">
   <meta property="og:site_name" content="Jacob Beckerman">
   <meta property="og:url" content="https://jbecke.github.io/project/squadie/">
   <meta property="og:title" content="Open IE Research | Jacob Beckerman">
-  <meta property="og:description" content="What is Open Information Extraction (OpenIE)? OpenIE is the Natural Language Processing task of extracting machine-readable information from free text (e.g. books, news, etc). Concretely, most OpenIE systems generate &lt;subject, relation, object&gt; tuples, e.g. &ldquo;Barack Obama was President of the United States.&rdquo; becomes &lt;Barack Obama, was President of, the United States&gt; or &lt;Barack Obama, was, President of the United States&gt;. OpenIE is useful for knowledge-base construction, fact-checking,
-What are the issues with existing systems?">
+  <meta property="og:description" content="What is Open Information Extraction (OpenIE)? OpenIE is the Natural Language Processing task of extracting machine-readable information from free text (e.g. books, news, etc). Concretely, most OpenIE systems generate &lt;subject, relation, object&gt; tuples, e.g. &ldquo;Barack Obama was President of the United States.&rdquo; becomes &lt;Barack Obama, was President of, the United States&gt; or &lt;Barack Obama, was, President of the United States&gt;. OpenIE is useful for knowledge-base construction, fact-checking, and other downstream NLP applications (Stanovsky et al.">
   <meta property="og:locale" content="en-us">
   
   <meta property="article:published_time" content="2018-07-24T14:27:01-04:00">
@@ -269,11 +267,25 @@ What are the issues with existing systems?">
 
 <h2 id="what-is-open-information-extraction-openie">What is Open Information Extraction (OpenIE)?</h2>
 
-<p>OpenIE is the <a href="https://github.com/sebastianruder/NLP-progress" target="_blank">Natural Language Processing task</a> of extracting machine-readable information from free text (e.g. books, news, etc). Concretely, most OpenIE systems generate &lt;subject, relation, object&gt; tuples, e.g. &ldquo;Barack Obama was President of the United States.&rdquo; becomes &lt;Barack Obama, was President of, the United States&gt; or &lt;Barack Obama, was, President of the United States&gt;. OpenIE is useful for knowledge-base construction, fact-checking,</p>
+<p>OpenIE is the <a href="https://github.com/sebastianruder/NLP-progress" target="_blank">Natural Language Processing task</a> of extracting machine-readable information from free text (e.g. books, news, etc). Concretely, most OpenIE systems generate &lt;subject, relation, object&gt; tuples, e.g. &ldquo;Barack Obama was President of the United States.&rdquo; becomes &lt;Barack Obama, was President of, the United States&gt; or &lt;Barack Obama, was, President of the United States&gt;. OpenIE is useful for knowledge-base construction, fact-checking, and other downstream NLP applications <a href="http://www.aclweb.org/anthology/P15-2050" target="_blank">(Stanovsky et al., 2015)</a>.</p>
 
 <h2 id="what-are-the-issues-with-existing-systems">What are the issues with existing systems?</h2>
 
-<p>Current systems fail to extract tuples for <em>implicit</em> relations, e.g. &ldquo;U.S. President Barack Obama said yesterday&hellip;&rdquo; should imply &lt;Barack Obama, is , U.S President&gt;. While some parse-based methods can handle simple implicit relations like this, the problem is quickly exasterbated.</p>
+<p>Current systems fail to extract tuples for <em>implicit</em> relations, e.g. &ldquo;U.S. President Barack Obama said yesterday&hellip;&rdquo; should imply &lt;Barack Obama, is , U.S President&gt;. While some parse-based methods can handle simple implicit relations like this, longer sentences pose problems.</p>
+
+<h2 id="what-i-ve-been-workin-on">What I&rsquo;ve been workin on</h2>
+
+<p>I&rsquo;ve created several tools towards implicit OpenIE and am currently working on a paper.</p>
+
+<ol>
+<li>Converted the SQuAD and NewsQA datasets to OpenIE datasets <a href="https://github.com/NPCai/Squadie" target="_blank">https://github.com/NPCai/Squadie</a></li>
+<li>Created an attention seq2seq model <a href="https://github.com/NPCai/Nopie" target="_blank">https://github.com/NPCai/Nopie</a></li>
+<li>Catalogued and examined previous works <a href="https://github.com/NPCai/Open-IE-Papers" target="_blank">https://github.com/NPCai/Open-IE-Papers</a></li>
+<li>Updated a previously existing benchmark to Python 3 and improved it <a href="https://github.com/NPCai/oie-benchmark" target="_blank">https://github.com/NPCai/oie-benchmark</a></li>
+<li>Other misc tools at <a href="https://github.com/NPCai" target="_blank">https://github.com/NPCai</a></li>
+</ol>
+
+<p>I&rsquo;ll be doing an Independent Study at Penn Engineering Fall 2018 semester.</p>
 
     </div>
 

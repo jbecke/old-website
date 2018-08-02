@@ -17,8 +17,7 @@
       
     
   
-  <meta name="description" content="Or equivalently, Folk Theories of Epiphenomena in Artificial Intelligence. In this post, I postulate that humans brains are “partially observable connectionists”: neural nets unable observe their full internal state. I wonder with what efficacy (over random search) these agents can reproduce their architectures, given their limited introspection abilities.
- A foreword on the word &ldquo;conscious&rdquo;: I use this word only in the context of &ldquo;the conscious brain&rdquo; which I use interchangeably with &ldquo;the accessible brain&rdquo;.">
+  <meta name="description" content="This post is a collection of viewpoints and ideas on NNs, ML, psychology and neuroscience that should be of interest to anyone interested in AGI. These ideas have made me go &ldquo;ahah&rdquo;, made me stop and ponder, do a double-take, or think about in the wee hours. The title reflects the opinion that these insights would be obvious, if only I could introspect on the firings of my neurons.">
 
   
   <link rel="alternate" hreflang="en-us" href="https://jbecke.github.io/post/connectionist/">
@@ -80,8 +79,7 @@
   <meta property="og:site_name" content="Jacob Beckerman">
   <meta property="og:url" content="https://jbecke.github.io/post/connectionist/">
   <meta property="og:title" content="The Tragedy of the Partially Observable Connectionist | Jacob Beckerman">
-  <meta property="og:description" content="Or equivalently, Folk Theories of Epiphenomena in Artificial Intelligence. In this post, I postulate that humans brains are “partially observable connectionists”: neural nets unable observe their full internal state. I wonder with what efficacy (over random search) these agents can reproduce their architectures, given their limited introspection abilities.
- A foreword on the word &ldquo;conscious&rdquo;: I use this word only in the context of &ldquo;the conscious brain&rdquo; which I use interchangeably with &ldquo;the accessible brain&rdquo;.">
+  <meta property="og:description" content="This post is a collection of viewpoints and ideas on NNs, ML, psychology and neuroscience that should be of interest to anyone interested in AGI. These ideas have made me go &ldquo;ahah&rdquo;, made me stop and ponder, do a double-take, or think about in the wee hours. The title reflects the opinion that these insights would be obvious, if only I could introspect on the firings of my neurons.">
   <meta property="og:locale" content="en-us">
   
   <meta property="article:published_time" content="2018-07-08T22:39:23-04:00">
@@ -232,7 +230,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    2 min read
+    3 min read
   </span>
   
 
@@ -294,16 +292,33 @@
     <div class="article-style" itemprop="articleBody">
       
 
-<blockquote>
-<p>Or equivalently, Folk Theories of Epiphenomena in Artificial Intelligence. In this post, I postulate that humans brains are “partially observable connectionists”: neural nets unable observe their full internal state. I wonder with what efficacy (over random search) these agents can reproduce their architectures, given their limited introspection abilities.</p>
-</blockquote>
-
-<p>A foreword on the word &ldquo;conscious&rdquo;: I use this word only in the context of &ldquo;the conscious brain&rdquo; which I use interchangeably with &ldquo;the accessible brain&rdquo;. By this I mean the part I have access to. For example, I have access to my internal voice, to feeling in my toes, to random fleeting memories, to music stuck in my head. I don&rsquo;t have access to the &ldquo;unconscious&rdquo; or &ldquo;inaccessible&rdquo; brain, i.e. the transmission of signals along my spinal cord, the firing of my neurons, and much more.</p>
+<p>This post is a collection of viewpoints and ideas on NNs, ML, psychology and neuroscience that should be of interest to anyone interested in AGI. These ideas have made me go &ldquo;ahah&rdquo;, made me stop and ponder, do a double-take, or think about in the wee hours. The title reflects the opinion that these insights would be obvious, if only I could introspect on the firings of my neurons.</p>
 
 <h2 id="a-model-of-the-brain">A model of the brain</h2>
 
-<p>One can think of the brain as a large collection the inaccessible machinery combined with a small window of accessible area. I imagine the mind like the Chinese Room, except instead of a dictionary, the man has a huge collection of bits and tools. Schmidhuber might say that there&rsquo;s an unconcious adaptive compreessor that provides most of our motivations. Even if not, I&rsquo;m more certain that the retreival process is mostly unconcious
-article on The Connectionist Database</p>
+<p>One can think of the brain as a large collection of inaccessible machinery combined with a small window of accessible area (&ldquo;conscious&rdquo; portion) <a href="https://simons.berkeley.edu/events/can-machine-be-conscious-towards-conscious-ai#" target="_blank">(Manuel Blum, 2018)</a>. Our introspective abilities &ndash; without external tools &ndash; are limited to the conscious portion. For example,  we cannot access the distributed representation of objects/concepts in our brain (assuming stored knowledge is not declarative, which I think is fair to make). Nor can we feel the internal firings of our neurons. However, we can describe certain logical aspects of the machinery, whether by evolutionary, logical, or folk explanations. To make this more concrete with an example:</p>
+
+<p><strong>I ask you to think of all possible objects like a stool.</strong></p>
+
+<p>Maybe you thought of a pedestal, a chair, a stair, a platform, etc.</p>
+
+<p>Why did your unconscious machinery produce those discrete concepts?</p>
+
+<p>Consider first the fact that I didn&rsquo;t ask for a specific relation to the discrete concept of &lsquo;chair&rsquo;, I just asked for similar objects. Perhaps the most salient relation of a stool is it&rsquo;s <em>purpose</em> (as opposed to form, size, color, etc), and so you conjured concepts of similar purpose. Whatever the reason, your <a href="http://people.idsia.ch/~juergen/interest.html" target="_blank">adaptive compressor</a> has compressed those distributed representations to be close together.</p>
+
+<p>When we build ANNs, we&rsquo;re using similar observations (AKA introspection, intuition) of epiphenomena. For example, the &ldquo;attention mechanism&rdquo; of seq2seq models comes from an intuition that a human translator has dynamic attention over the input sentence <a href="https://arxiv.org/abs/1409.0473" target="_blank">(Bahdanau et al., 2014)</a>. Is is from this intuition what we infer a plausible structure. One problem I see with this is that there could be so many intermediate processes (i.e. that are not apparent to us) about the brain, that our intuition isn&rsquo;t disposed to discover. Another problem is that there&rsquo;s so many</p>
+
+<hr />
+
+<h2 id="imbue-or-teach">Imbue or teach?</h2>
+
+<p>At the end of (this talk at MSR)[<a href="https://youtu.be/Yr1mOzC93xs?t=59m13s" target="_blank">https://youtu.be/Yr1mOzC93xs?t=59m13s</a>], Yoshu Bengio has a good line.</p>
+
+<p>&ldquo;We are using our intuition, maths, and insights to build in the kind of priors evolution has optimized. And we are starting to use the same kind of mechanisms that evolution uses, like meta-learning. [&hellip;] Ultimately we can use some of [meta-learning] to discover the underlying discovery, but we&rsquo;d also like to do it in a way that we understand the principles that give rise to good machine learning.&rdquo;</p>
+
+<h2 id="but-we-understand-the-brain-because-neuroscience">But we understand the brain because neuroscience!</h2>
+
+<p>Because of our limited understanding of neuroscience (or, at the very least, the limited understanding by AI researchers) I think it&rsquo;s a fair approximation to say that we have little introspective ability beyond the conscious part. Use of intuitions has far exceeded neuroscience in ANN literature. I&rsquo;d argue, even when neuroscience is used, it is as an explanation to justify initial intuitions.</p>
 
     </div>
 

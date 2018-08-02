@@ -11,6 +11,72 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Top Down or Bottom Up: Two Paradigms for Artificial General Intelligence</title>
+      <link>https://jbecke.github.io/post/top-down-bottom-up/</link>
+      <pubDate>Thu, 26 Jul 2018 21:07:34 -0400</pubDate>
+      
+      <guid>https://jbecke.github.io/post/top-down-bottom-up/</guid>
+      <description>
+
+&lt;p&gt;Artificial General Intelligence (AGI, AKA strong AI, human-level AI) refers an AI that can solve any task a human can. I&amp;rsquo;m most interested in a conversational AI that is indistinguishable from a human &lt;a href=&#34;https://www.independent.co.uk/life-style/gadgets-and-tech/news/facebook-artificial-intelligence-ai-chatbot-new-language-research-openai-google-a7869706.html&#34; target=&#34;_blank&#34;&gt;(Turing, 1950)&lt;/a&gt;. Whatever you call it, there is a dichotomy in building AGI: &lt;strong&gt;use one giant neural network, or use more than one.&lt;/strong&gt; It sounds like an implementation-specific decision, but your opinion will inform your research discipline of choice (assuming you want to build AGI).&lt;/p&gt;
+
+&lt;p&gt;I go back and forth on the topic and this post serves as a record of internal debate.&lt;/p&gt;
+
+&lt;h2 id=&#34;an-argument-for-bottom-up&#34;&gt;An argument for bottom-up&lt;/h2&gt;
+
+&lt;p&gt;The simplest option is a mega-neural network trained via Reinforcement Learning or Evolutionary Strategies. You&amp;rsquo;d give it a body, an environment, and let it run around and learn. With the excitement around Atari &lt;a href=&#34;https://arxiv.org/abs/1312.5602&#34; target=&#34;_blank&#34;&gt;(Minh et al., 2013)&lt;/a&gt;, Dota 2 &lt;a href=&#34;https://blog.openai.com/openai-five/&#34; target=&#34;_blank&#34;&gt;(OpenAI, various)&lt;/a&gt;, and other games, this idea seems most popular with the press &lt;a href=&#34;https://www.independent.co.uk/life-style/gadgets-and-tech/news/facebook-artificial-intelligence-ai-chatbot-new-language-research-openai-google-a7869706.html&#34; target=&#34;_blank&#34;&gt;(The Independent, 2015)&lt;/a&gt;. (A bottom-up system that suddenly becomes sentient is much more interesting than Apple over-engineering Siri for 50 years until it becomes similarly smart).&lt;/p&gt;
+
+&lt;p&gt;The problem is RL and ES require a metric to define success, e.g. the reward function. What should be the reward function? A naive approach would be to give it rewards for being human-like, e.g. points for using words, proper grammar, being useful, being nice, etc. This will never work because the reward function would be incredibly sparse relative to the desired actions. There are other interesting ideas like general formulas for emotions &lt;a href=&#34;https://arxiv.org/abs/1705.05172&#34; target=&#34;_blank&#34;&gt;(Moerland et al., 2018)&lt;/a&gt;, maximal compression of an adaptive compressor &lt;a href=&#34;http://people.idsia.ch/~juergen/creativity.html&#34; target=&#34;_blank&#34;&gt;(Schmidhuber, various)&lt;/a&gt;, or empowerment &lt;a href=&#34;https://arxiv.org/abs/1509.08731&#34; target=&#34;_blank&#34;&gt;(Mohamed et al., 2015)&lt;/a&gt;, and other information-theoretic ideas in &amp;ldquo;intrinsically-motivated&amp;rdquo; reinforcement learning.&lt;/p&gt;
+
+&lt;h2 id=&#34;counter-points-to-bottom-up&#34;&gt;Counter points to bottom-up&lt;/h2&gt;
+
+&lt;p&gt;The problem is bottom-up requires massive computing power. The current state-of-the-art RL research task is training a simulated agent to walk. This takes days on many computers &lt;a href=&#34;http://eng.uber.com/wp-content/uploads/2017/12/improving-es-arxiv.pdf&#34; target=&#34;_blank&#34;&gt;(Conti et al., 2017)&lt;/a&gt;. While steady improvements are being made, it&amp;rsquo;s hard to see that this will lead anywhere in terms of AGI. Even if research gives an order of magnitude improvement in all metrics, where does that get the field? Maybe then the agents would be able to sprint, jump, ice skate, snowboard, etc., but they&amp;rsquo;ll still be as dumb as their objective function. I think we&amp;rsquo;d need a $10^3$ to $10^6$ improvement in GPU performance for this to be remotely feasible.&lt;/p&gt;
+
+&lt;p&gt;Perhaps the RL formalism is wrong. Perhaps there is no objective function that can create AGI.&lt;/p&gt;
+
+&lt;h2 id=&#34;an-argument-for-top-down&#34;&gt;An argument for top-down&lt;/h2&gt;
+
+&lt;p&gt;A top-down system uses many components which may be ML-based or symbolic. Knowledge is stored in a symbolic database, an NN, or both at different points in the system.&lt;/p&gt;
+
+&lt;p&gt;Modern virtual assistants like Siri use a pipeline (a specific type of top-down system):&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Speech-recognition to turn voice to text&lt;/li&gt;
+&lt;li&gt;Intent recognition to understand what type of request you made (e.g. play music)&lt;/li&gt;
+&lt;li&gt;Information extraction to determine the request specifics (e.g. you asked for Fly Me To The Moon by Frank Sinatra)&lt;/li&gt;
+&lt;li&gt;Information retrieval (e.g. get latest weather, e.g. find Fly Me To The Moon in Apple Music)&lt;/li&gt;
+&lt;li&gt;Natural language generation (e.g. &amp;ldquo;Now playing Fly Me To The Moon&amp;rdquo;)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;This allows engineers to make neural networks for the specific task. This is good because NNs are typically bad at doing multiple tasks or tasks that are not well-defined. It would be too hard to train a system to do all the tasks at once. This would require huge amounts of data and processing. A mega-NN also doesn&amp;rsquo;t allow you to upgrade subcomponents (e.g. a better speech-recognition system).&lt;/p&gt;
+
+&lt;p&gt;Note that it is not necessary for the system to be a &amp;ldquo;pipeline&amp;rdquo;, it could be a cycle, a waterfall, or whatever paradigm the project-manager wants to call it. The central idea is that there are many interacting subcomponents; it is an engineered system probably developed by a large team with many specialists.&lt;/p&gt;
+
+&lt;h3 id=&#34;what-research-does-this-lead-one-to&#34;&gt;What research does this lead one to?&lt;/h3&gt;
+
+&lt;p&gt;On days where I&amp;rsquo;m thinking the top-down is the best approach &amp;ndash; i.e. when waiting 48 hours for a P100 to finish training and wondering if a giant block of &lt;em&gt;if&lt;/em&gt;&amp;rsquo;s may do the trick &amp;ndash; I&amp;rsquo;m lead to a certain subset of CS research. Specifically, computational linguistics, hierarchical planning, knowledge representation, database systems, supervised learning methods, computer vision, haptics, formal logic, and knowledge graph embeddings. &lt;strong&gt;Together, these may be the tools needed to piece together a human.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;counter-points-to-top-down&#34;&gt;Counter points to top-down&lt;/h2&gt;
+
+&lt;p&gt;On the other hand, one could argue that no matter how many subcomponents you piece together, you&amp;rsquo;ll never have true AGI. It is certainly true that our brains are not declarative, not hierarchically planned, and not separately pieced together.&lt;/p&gt;
+
+&lt;p&gt;Another issue is that there seem to be two prerequisites for AGI: intuitive physics and intuitive psychology &lt;a href=&#34;http://phys.csail.mit.edu/&#34; target=&#34;_blank&#34;&gt;(Tenenbaum&amp;rsquo;s group and others, various)&lt;/a&gt;. Together, they form the basis for common sense. Without these two things, you&amp;rsquo;d need an impossible number of rules, e.g. &amp;ldquo;Birds can fly because they have wings.&amp;rdquo; Intuitive physics and psychology serve to compress world-knowledge immensely. But how do you create a schema for common sense? I&amp;rsquo;ve thought about this problem quite a bit and am writing another post on it. It&amp;rsquo;s actually a lot harder than you&amp;rsquo;d think, as &lt;a href=&#34;http://groups.csail.mit.edu/medg/ftp/psz/k-rep.html#role5&#34; target=&#34;_blank&#34;&gt;Davis et al., 1998&lt;/a&gt; point out:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The theory [i.e. any schema you try and conjure up] is fragmentary in two distinct senses: (i) the representation typically incorporates only part of the insight or belief that motivated it, and (ii) that insight or belief is in turn only a part of the complex and multi-faceted phenomenon of intelligent reasoning.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;my-opinion&#34;&gt;My opinion&lt;/h2&gt;
+
+&lt;p&gt;I don&amp;rsquo;t know. I think I&amp;rsquo;ll be long dead by the time bottom-up is computationally feasible. However, I agree top-down is lacks the &amp;ldquo;common sense&amp;rdquo; or &amp;ldquo;intelligent reasoning&amp;rdquo; component.&lt;/p&gt;
+
+&lt;h2 id=&#34;middle-out&#34;&gt;Middle-out?&lt;/h2&gt;
+
+&lt;p&gt;Maybe the solution is to think of AGI a a swiss-army knife. You could put RL at the centre, with many pre-trained modules (e.g. speech-recognition, vision) at the edges, and give the RL controller the ability to resume training of the modules or create new modules. I think this is roughly equivalent to a human baby, who innately has the ability to smell, see, touch, hear, talk, but has to figure out how to use all his subsystems effectively. This still leaves the problem of an appropriate reward function.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Vr Vendor</title>
       <link>https://jbecke.github.io/project/vr-vendor/</link>
       <pubDate>Tue, 24 Jul 2018 16:21:18 -0400</pubDate>
@@ -29,11 +95,25 @@
 
 &lt;h2 id=&#34;what-is-open-information-extraction-openie&#34;&gt;What is Open Information Extraction (OpenIE)?&lt;/h2&gt;
 
-&lt;p&gt;OpenIE is the &lt;a href=&#34;https://github.com/sebastianruder/NLP-progress&#34; target=&#34;_blank&#34;&gt;Natural Language Processing task&lt;/a&gt; of extracting machine-readable information from free text (e.g. books, news, etc). Concretely, most OpenIE systems generate &amp;lt;subject, relation, object&amp;gt; tuples, e.g. &amp;ldquo;Barack Obama was President of the United States.&amp;rdquo; becomes &amp;lt;Barack Obama, was President of, the United States&amp;gt; or &amp;lt;Barack Obama, was, President of the United States&amp;gt;. OpenIE is useful for knowledge-base construction, fact-checking,&lt;/p&gt;
+&lt;p&gt;OpenIE is the &lt;a href=&#34;https://github.com/sebastianruder/NLP-progress&#34; target=&#34;_blank&#34;&gt;Natural Language Processing task&lt;/a&gt; of extracting machine-readable information from free text (e.g. books, news, etc). Concretely, most OpenIE systems generate &amp;lt;subject, relation, object&amp;gt; tuples, e.g. &amp;ldquo;Barack Obama was President of the United States.&amp;rdquo; becomes &amp;lt;Barack Obama, was President of, the United States&amp;gt; or &amp;lt;Barack Obama, was, President of the United States&amp;gt;. OpenIE is useful for knowledge-base construction, fact-checking, and other downstream NLP applications &lt;a href=&#34;http://www.aclweb.org/anthology/P15-2050&#34; target=&#34;_blank&#34;&gt;(Stanovsky et al., 2015)&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&#34;what-are-the-issues-with-existing-systems&#34;&gt;What are the issues with existing systems?&lt;/h2&gt;
 
-&lt;p&gt;Current systems fail to extract tuples for &lt;em&gt;implicit&lt;/em&gt; relations, e.g. &amp;ldquo;U.S. President Barack Obama said yesterday&amp;hellip;&amp;rdquo; should imply &amp;lt;Barack Obama, is , U.S President&amp;gt;. While some parse-based methods can handle simple implicit relations like this, the problem is quickly exasterbated.&lt;/p&gt;
+&lt;p&gt;Current systems fail to extract tuples for &lt;em&gt;implicit&lt;/em&gt; relations, e.g. &amp;ldquo;U.S. President Barack Obama said yesterday&amp;hellip;&amp;rdquo; should imply &amp;lt;Barack Obama, is , U.S President&amp;gt;. While some parse-based methods can handle simple implicit relations like this, longer sentences pose problems.&lt;/p&gt;
+
+&lt;h2 id=&#34;what-i-ve-been-workin-on&#34;&gt;What I&amp;rsquo;ve been workin on&lt;/h2&gt;
+
+&lt;p&gt;I&amp;rsquo;ve created several tools towards implicit OpenIE and am currently working on a paper.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Converted the SQuAD and NewsQA datasets to OpenIE datasets &lt;a href=&#34;https://github.com/NPCai/Squadie&#34; target=&#34;_blank&#34;&gt;https://github.com/NPCai/Squadie&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Created an attention seq2seq model &lt;a href=&#34;https://github.com/NPCai/Nopie&#34; target=&#34;_blank&#34;&gt;https://github.com/NPCai/Nopie&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Catalogued and examined previous works &lt;a href=&#34;https://github.com/NPCai/Open-IE-Papers&#34; target=&#34;_blank&#34;&gt;https://github.com/NPCai/Open-IE-Papers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Updated a previously existing benchmark to Python 3 and improved it &lt;a href=&#34;https://github.com/NPCai/oie-benchmark&#34; target=&#34;_blank&#34;&gt;https://github.com/NPCai/oie-benchmark&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Other misc tools at &lt;a href=&#34;https://github.com/NPCai&#34; target=&#34;_blank&#34;&gt;https://github.com/NPCai&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I&amp;rsquo;ll be doing an Independent Study at Penn Engineering Fall 2018 semester.&lt;/p&gt;
 </description>
     </item>
     
