@@ -11,6 +11,39 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Search Penngine</title>
+      <link>https://jbecke.github.io/project/search-engine/</link>
+      <pubDate>Fri, 17 Aug 2018 18:21:54 -0400</pubDate>
+      
+      <guid>https://jbecke.github.io/project/search-engine/</guid>
+      <description>&lt;figure&gt;
+
+&lt;img src=&#34;https://jbecke.github.io/img/search1.png&#34; /&gt;
+
+
+
+&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; &gt;
+  &lt;h4&gt;Search results for Robert Mueller&lt;/h4&gt;
+  
+&lt;/figcaption&gt;
+
+&lt;/figure&gt;
+
+&lt;p&gt;CIS 555 is a project elective at Penn where groups of students builds a search engine (&amp;ldquo;Google clone&amp;rdquo;) from scratch. Most of the semester is done individually until the last month, where students come together and build the final product.&lt;/p&gt;
+
+&lt;p&gt;The semester started by building a server that accepted HTTP requests using Java&amp;rsquo;s TCP Socket and SocketFactory classes. This involved a deep dive into the HTTP 1.0/1.1 spec to ensure my system was compliant. I soon extended the server to a multithreaded implementation that used my own blocking queue and thread pool implementation. I benchmarked to ensure accuracy and ability to handle concurrent requests of different content types. Following this, I build a servlet container according to the Java spec, on top of my server. Next, I layered on a multithreaded crawler that adhered to polite web crawling standards. In a bit of a detour, I built a stream processing engine (Apache Storm clone) that pushed content from the crawler to users based on their subscriptions (like RSS). On top of the stream processing engine, I build a MapReduce engine that would be the basis for our final PageRank and TFIDF implementations. This all took about 4 months of individual work before groups were formed.&lt;/p&gt;
+
+&lt;p&gt;While other groups decided to move to Amazon for their final project, we decided to only use our own code. Our final project, Search Penngine, had a distributed, polite, crash-fault-tolerant crawl queue and a distributed filesystem. We were able to crawl thousands of URLs per minute using a cluster of five EC2 machines. One of the workers was also a master node that displayed diagnostics of the system. The master wasn&amp;rsquo;t a point of failure however, as each node routed links to the appropriate node based on the hash of the URL. I built the front end (including some Twitter search integration for fun), the distributed crawler, and made most of the architectural decisions. I learned the importance of good documentation, planning, and future-proofing code.&lt;/p&gt;
+
+&lt;p&gt;One hiccup we ran into was slow PageRank and TFIDF runtimes. I found the issue was coming from my underlying MapReduce engine caching intermediate (key, value) pairs on disk instead of in memory. This is not necessarily a bad thing (indeed, were were instructed to do this during the semester) but caused significant delays in the two operations that used the engine. To solve this we upgraded our EC2 machines to 32 GB of RAM and switched to using a hash map to cache intermediate results. The following morning refrained from telling the guys what I&amp;rsquo;d done (I was administering the EC2 nodes), just saying that somehow TFIDF/PageRank sped up by 100x overnight! The in-memory caching allowed us to examine much more of the 1.6 million URLs we crawled and stored.&lt;/p&gt;
+
+&lt;p&gt;I refrain from sharing code for this project because the class runs every year, but here is another screenshot!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jbecke.github.io/img/search2.png&#34; alt=&#34;search penngine screenshot cars&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Top Down or Bottom Up: Two Paradigms for Artificial General Intelligence</title>
       <link>https://jbecke.github.io/post/top-down-bottom-up/</link>
       <pubDate>Thu, 26 Jul 2018 21:07:34 -0400</pubDate>

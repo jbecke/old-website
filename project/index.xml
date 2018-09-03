@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Jacob  Beckerman 2018</copyright>
-    <lastBuildDate>Tue, 24 Jul 2018 16:21:18 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 17 Aug 2018 18:21:54 -0400</lastBuildDate>
     
 	<atom:link href="https://jbecke.github.io/project/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Search Penngine</title>
+      <link>https://jbecke.github.io/project/search-engine/</link>
+      <pubDate>Fri, 17 Aug 2018 18:21:54 -0400</pubDate>
+      
+      <guid>https://jbecke.github.io/project/search-engine/</guid>
+      <description>Search results for Robert Mueller   CIS 555 is a project elective at Penn where groups of students builds a search engine (&amp;ldquo;Google clone&amp;rdquo;) from scratch. Most of the semester is done individually until the last month, where students come together and build the final product.
+The semester started by building a server that accepted HTTP requests using Java&amp;rsquo;s TCP Socket and SocketFactory classes. This involved a deep dive into the HTTP 1.</description>
+    </item>
     
     <item>
       <title>Vr Vendor</title>
